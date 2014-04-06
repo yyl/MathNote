@@ -3,6 +3,8 @@ Random Variables
 
 ### Dicrete RV
 
+***
+
 - random variable `X`: 
     - a variable whose possible values are numerical outcomes of a random phenomenon
     - `X` is observations of a _probability model_
@@ -63,6 +65,8 @@ Random Variables
 
 ### Continuous RV
 
+***
+
 - _interval_: a continuous set of numbers containing all of the real numbers between two limits such as `(x1, x2)`
 - `X` is continuous RV if its CDF `F_X(x)` is a continuous function
 - example: voltage across a resistor
@@ -82,6 +86,7 @@ Random Variables
     - given `Y = aX`, then
         - CDF `F_Y(y) = F_X(y/a)`
         - PDF `f_Y(y) = (1/a)f_X(y/a)`
+
 #### Families of continunous RV
 
 - Uniform
