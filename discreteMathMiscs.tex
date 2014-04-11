@@ -8,7 +8,7 @@
 \usepackage{amssymb}
 \setlength{\parindent}{0cm}
 
-\title{Logic and Symbols}
+\title{Topics in Discrete Math}
 \author{Yulong Yang}
 %\date{}							% Activate to display a given date or no date
 
@@ -44,12 +44,16 @@ Example:
 
 The extent to which a predicate is true over a range of elements (for the variable). Mostly use words like ``all", ``some", etc.
 
-\section{Logics}
+\subsection{logic examples}
 
 \begin{itemize}
 \item $p \rightarrow q$: is the proposition ``if p then q", which is false iif $p$ is true and $q$ is false [\textit{propositional}]
 \item $\forall xP(x)$: true iif for $P(x)$ is true for every $x$ in the domain [\textit{predicate}]
 \end{itemize}
+
+\section{Set}
+
+A set $S$ is closed under addition if for any $x,y \in S$ we have also $x+y \in S$. Also, it is closed under multiplication if $x \times y \in S$.
 
 \section{Regular expression}
 
@@ -67,6 +71,25 @@ The extent to which a predicate is true over a range of elements (for the variab
 \item $f(n) \in O(g(x))$: there are constants $C$ and $k$ such that $|f(x)| \leq C|g(x)|$ for any $x > k$
 \item $f(n) \in \Omega(g(x))$: replace $\leq$ with $\geq$
 \item $f(n) \in \Theta(g(x))$: both above two stand correct
+\end{itemize}
+
+Master theorem in Figure~\ref{fig:mt}. Use it to solve any recurrence problems.
+
+\begin{figure}[htpb]
+\begin{center}
+\includegraphics[width=\textwidth]{master.png}
+\caption{Master Therorem}
+\label{fig:mt}
+\end{center}
+\end{figure}
+
+
+\section{Graph}
+
+Planar graph,
+\begin{itemize}
+\item a graph that could be drawn without any edges crossing (planar representation)
+\item Euler's formula: given $e$ edges, $v$ vertices and $r$ regions in a planar representation, we have $r = e - v + 2$
 \end{itemize}
 
 \end{document}  
