@@ -1,0 +1,89 @@
+\documentclass[11pt, oneside]{article}   	% use "amsart" instead of "article" for AMSLaTeX format
+\usepackage{geometry}                		% See geometry.pdf to learn the layout options. There are lots.
+\geometry{letterpaper}                   		% ... or a4paper or a5paper or ... 
+%\geometry{landscape}                		% Activate for for rotated page geometry
+%\usepackage[parfill]{parskip}    		% Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}				% Use pdf, png, jpg, or eps§ with pdflatex; use eps in DVI mode
+\usepackage{amsmath}								% TeX will automatically convert eps --> pdf in pdflatex		
+\usepackage{amssymb}
+\setlength{\parindent}{0cm}
+
+\title{Random Variables}
+\author{Yulong Yang}
+%\date{}							% Activate to display a given date or no date
+
+\begin{document}
+\maketitle
+%\section{}
+%\subsection{}
+
+\section{Multiple RVs}
+
+\subsection{joint CDF, PMF and PDF}
+
+\begin{equation}
+F_{X,Y}(x,y)=P[X \leq x,Y \leq y]
+\end{equation}
+
+\begin{equation}
+P_{X,Y}(x,y)=P[X = x,Y = y]
+\end{equation}
+
+\begin{equation}
+f_{X,Y}(x,y)=\frac{d^2 F_{X,Y}(x,y)} {dx d y}
+\end{equation}
+
+\subsection{marginal PMF and PDF}
+
+\begin{equation}
+P_{X}(x)=\sum_{y \in S_Y} P_{X,Y}(x,y)
+\end{equation}
+
+\begin{equation}
+f_{X}(x)=\int_{-\infty}^{\infty}f_{X,Y}(x,y) dy
+\end{equation}
+
+\subsection{Expected values}
+
+For 2 RVs $X$ and $Y$, 
+
+\begin{equation}
+E[X+Y] = E[X] + E[Y]
+\end{equation}
+
+\begin{equation}
+Var[X+Y] = Var[X] + Var[Y] + 2E[(X-\mu_X)(Y-\mu_Y)]
+\end{equation}
+
+covariance,
+\begin{equation}
+Cov[X,Y] = E[(X-\mu_X)(Y-\mu_Y)] = r_{X,Y} - \mu_X\mu_Y
+\end{equation}
+
+correlation,
+\begin{equation}
+r_{X,Y} = E[XY]
+\end{equation}
+
+correlation coefficient,
+\begin{equation}
+\rho_{X,Y}= \frac{Cov[X,Y]}{\sqrt{Var[X][Var[Y]}}, -1 \leq \rho_{X,Y} \leq 1
+\end{equation}
+
+$X$ and $Y$ are stochastically independent iff,
+\begin{equation}
+f_{X,Y}(x,y)=f_{X}(x)f_{Y}(y)
+\end{equation}
+
+
+Given $W=g(X,Y)$ and two RVs $X$ and $Y$, the expected value is,
+
+\begin{equation}
+Discrete: E[W]=\sum_{x \in S_X}\sum_{y \in S_Y} g(x,y)P_{X,Y}(x,y)
+\end{equation}
+
+\begin{equation}
+Continuous: E[W]=\int_{-\infty}^{\infty}\int_{-\infty}^{\infty} g(x,y)f_{X,Y}(x,y) dxdy
+\end{equation}
+
+\end{document}  
