@@ -57,7 +57,51 @@ Gaussian RV is,
 \item continuous
 \end{itemize}
 
+\section{Detection error}
 
+When we try to detect a signal, it is either present ($s_1$) or absent ($s_0$). When present the mean could be $A$, and $0$ when absent, as the Figure~\ref{fig:detection}. 
 
+\begin{figure}[htpb]
+\begin{center}
+\includegraphics[width=\textwidth]{detection.png}
+\caption{Master Therorem}
+\label{fig:detection}
+\end{center}
+\end{figure}
+
+In such detection scenario, we have two types of detection error,
+
+\begin{itemize}
+\item false alarm: $P(detecting\_as\_s_1 | s_0)$
+\item missed detection: $P(detecting\_as\_s_0 | s_1)$
+\end{itemize}
+
+Therefore, let $P_1, P_0$ be the probability of the signal present and absent respectively, the probability of detection error is,
+
+\begin{equation}
+P_e = P_0P(detecting\_as\_s_1 | s_0) + P_1P(detecting\_as\_s_0 | s_1)
+\end{equation}
+
+\section{Point estimate}
+
+Let $X$ be a Gaussian $(\mu, \sigma)$ RV. A confidence interval estimate would be
+
+\begin{equation}
+M_n(X) - c \leq \mu \leq M_n(X) + c
+\end{equation}
+
+in which $M_n(X)$ is the estimate of $\mu$, and $n$ is the sample size. It is equivalent to 
+
+\begin{equation}
+|\mu - M_n(X)| \leq c
+\end{equation}
+
+The estimate has a confidence coefficient $1-\alpha$ where
+
+\begin{equation}
+\alpha/2 = 1 - \Phi (\frac{c\sqrt{n}}{\sigma})
+\end{equation}
+
+and once we get $c$ from $\Phi()$, we could calculate either $M_n$ or $n$.
 
 \end{document}  
