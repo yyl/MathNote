@@ -25,6 +25,64 @@
 P[A|B] = \frac{P[AB]}{P[B]} = \frac{P[B|A]P[A]}{P[B]}
 \end{equation}
 
+\subsection{Valid PMF/CDF/PDF}
+
+A valid PDF should have,
+
+\begin{equation}
+\forall x, f_{X}(x) \geq 0
+\end{equation}
+
+\begin{equation}
+F_X(x) = \int_{-\infty}^{x}f_X (u) du
+\end{equation}
+
+\begin{equation}
+\int_{-\infty}^{\infty}f_X (x) dx = 1
+\end{equation}
+
+PMF is simlilar.
+
+A valid CDF should have,
+
+\begin{equation}
+    F_X(-\infty) = 0, F_X(\infty) = 1
+\end{equation}
+
+\begin{equation}
+    \forall x' \geq x, F_X(x') \geq F_X(x)
+\end{equation}
+
+\subsection{List of common integrals}
+
+\begin{itemize}
+    \item $\int \frac{1}{x} dx = ln|x|$
+    \item $\int f'(x)e^{f(x)} dx = e^{f(x)}$
+    \item $\int 1/(1+x^2)dx = tan^{-1}(x) = arctan(x)$
+    \item $\int sin(x) dx = -cos(x), \int cos(x) dx = sin(x)$
+    \item $\int a^x dx = a^x/ln(a)$
+    \item $\int ln(x) dx = xln(x) - x$
+\end{itemize}
+
+\section{Families of RVs}
+
+\subsection{exponential}
+
+Continuous exponential ($\lambda$) RV,
+
+\[ f_X(x) = \left\{ 
+  \begin{array}{l l}
+    \lambda e^{-\lambda x} & \quad x \geq 0,\\
+    0 & \quad \text{otherwise},
+  \end{array} \right.\]
+
+with $\lambda > 0$.
+
+\begin{itemize}
+    \item $E[X] = 1/ \lambda$
+    \item $Var[X] = 1/ \lambda ^2$
+\end{itemize}
+
 \section{Multiple RVs}
 
 \subsection{joint CDF, PMF and PDF}
