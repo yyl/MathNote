@@ -53,6 +53,21 @@ A valid CDF should have,
     \forall x' \geq x, F_X(x') \geq F_X(x)
 \end{equation}
 
+\subsection{Inequality}
+
+Given nonnegative RV $X$ (i.e. $P[X<0]=0$) and a constant $c$, \textbf{Markov inequality} shows,
+
+\begin{equation}
+    P[X \geq c^2] \leq \frac{E[X]}{c^2}
+\end{equation}
+
+Given arbitrary RV $X$ and constant $c>0$, \textbf{Chebyshev inequality} shows,
+
+\begin{equation}
+    P[|X - \mu_X| \geq c] \leq \frac{Var[X]}{c^2}
+\end{equation}
+
+
 \subsection{List of common integrals}
 
 \begin{itemize}
@@ -82,6 +97,24 @@ with $\lambda > 0$.
     \item $E[X] = 1/ \lambda$
     \item $Var[X] = 1/ \lambda ^2$
 \end{itemize}
+
+\subsection{Poisson}
+
+Discrete Poisson ($\alpha = \lambda T$) RV $N(T)$ has PMF,
+
+\[ P_{N(T)}(n) = \left\{ 
+  \begin{array}{l l}
+      (\lambda T)^n e^{-\lambda T} / n! & \quad n = 0,1,2,...,\\
+    0 & \quad \text{otherwise},
+  \end{array} \right.\]
+
+  in which $\lambda$ is the arrivals per second, and $T$ is a time interval. If we call the occurrence of the phenomenon of interest an \textit{arrival}, Poisson model could be used to describe the avrage arrival rate of such arrivals. In the time interval specified by $T$, the number of arrivals $N(T)$ has a Poisson PMF with $\alpha=\lambda T$.
+
+A sample use would be, given arrival rate $\lambda$, and time interval $\tau$, calculate the probability that within the time interval the number of arrivals is $n$,
+
+\begin{equation}
+P[N(t+\tau) - N(t) = n] = P_{N(\tau)}(n) = \frac{(\lambda \tau)^n e^{-\lambda \tau}}{n!}
+\end{equation}
 
 \section{Multiple RVs}
 
