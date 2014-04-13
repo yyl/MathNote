@@ -79,11 +79,62 @@ Given arbitrary RV $X$ and constant $c>0$, \textbf{Chebyshev inequality} shows,
     \item $\int ln(x) dx = xln(x) - x$
 \end{itemize}
 
+\section{Expected value}
+
+The expected value of $X$ is
+
+\begin{equation}
+    E[X] = \mu_X = \sum_{x \in S_X} x P_X(x) = \int_{-\infty}^{\infty} x f_X(x) dx
+\end{equation}
+
+Also for any RV $X$,
+
+\begin{equation}
+    E[aX + b] = aE[X] + b
+\end{equation}
+
+\begin{equation}
+    Var[X] = E[X^2] - \mu_X^2 = \int_{-\infty}^{\infty} x^2 f_X(x) dx + \mu_X^2
+\end{equation}
+
+\begin{equation}
+    Var[aX + b] = a^2Var[X]
+\end{equation}
+
+Given relationship of 2 RVs as $Y = g(X)$,
+
+\begin{equation}
+    Var[Y] = \mu_Y = \sum_{x \in S_X} g(x) P_X(x) =  \int_{-\infty}^{\infty} g(x) f_X(x) dx
+\end{equation}
+
 \section{Families of RVs}
+
+\subsection{Bernoulli}
+
+Bernoulli ($p$) RV $X$ has PMF,
+
+\[ P_X(x) = \left\{ 
+  \begin{array}{l l}
+    p & \quad x = 1,\\
+    1 - p & \quad x = 0,\\
+    0 & \quad \text{otherwise},
+\end{array} \right.\]
+
+in which $0 < p < 1$, and $E[X] = p$, $Var[X] = p(1-p)$
+
+\subsection{Binomial}
+
+Binomial $(n, p)$ RV $X$ has PMF,
+
+\begin{equation}
+    P_X(x) = \binom{n}{x} p^x (1-p)^{n-x}
+\end{equation}
+
+in which $0 < p < 1$, and $n \geq 1$, $E[X] = np, Var[X] = np(1-p)$
 
 \subsection{exponential}
 
-Continuous exponential ($\lambda$) RV,
+Continuous exponential ($\lambda$) RV $X$ has PDF,
 
 \[ f_X(x) = \left\{ 
   \begin{array}{l l}
@@ -91,12 +142,7 @@ Continuous exponential ($\lambda$) RV,
     0 & \quad \text{otherwise},
   \end{array} \right.\]
 
-with $\lambda > 0$.
-
-\begin{itemize}
-    \item $E[X] = 1/ \lambda$
-    \item $Var[X] = 1/ \lambda ^2$
-\end{itemize}
+with $\lambda > 0$, and $E[X] = 1/ \lambda$, $Var[X] = 1/ \lambda ^2$
 
 \subsection{Poisson}
 
@@ -115,6 +161,8 @@ A sample use would be, given arrival rate $\lambda$, and time interval $\tau$, c
 \begin{equation}
 P[N(t+\tau) - N(t) = n] = P_{N(\tau)}(n) = \frac{(\lambda \tau)^n e^{-\lambda \tau}}{n!}
 \end{equation}
+
+Also, $E[X] = Var[X] = \lambda$.
 
 \section{Multiple RVs}
 
