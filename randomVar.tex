@@ -74,10 +74,32 @@ Given arbitrary RV $X$ and constant $c>0$, \textbf{Chebyshev inequality} shows,
     \item $\int \frac{1}{x} dx = ln|x|$
     \item $\int f'(x)e^{f(x)} dx = e^{f(x)}$
     \item $\int 1/(1+x^2)dx = tan^{-1}(x) = arctan(x)$
+    \item $\int 1/\sqrt{1-x^2} dx = sin^-1(x)$
+    \item $\int -1/\sqrt{1-x^2} dx = cos^-1(x) = arcos(x)$
     \item $\int sin(x) dx = -cos(x), \int cos(x) dx = sin(x)$
     \item $\int a^x dx = a^x/ln(a)$
     \item $\int ln(x) dx = xln(x) - x$
 \end{itemize}
+
+\subsection{function of a RV}
+
+Given discrete RV $X$, the PMF of $Y=g(X)$ is
+
+\begin{equation}
+    P_Y(y)=\sum_{x:g(x)=y} P_X(x)
+\end{equation}
+
+Given $Y=aX$, where $a>0$, $Y$ has CDF and PDF,
+
+\begin{equation}
+    F_Y(y) = F_X(y/a), f_Y(y) = \frac{1}{a} f_X(y/a)
+\end{equation}
+
+If $Y = X+b$, 
+
+\begin{equation}
+    F_Y(y) = F_X(y-b), f_Y(y) = f_X(y-b)
+\end{equation}
 
 \section{Expected value}
 

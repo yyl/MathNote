@@ -51,6 +51,7 @@ The extent to which a predicate is true over a range of elements (for the variab
 \item $p \leftrightarrow q$: is the proposition ``$p$ iff $q$", which is true when $p$ and $q$ has the same truth value [\textit{propositional}]
 \item $\neg p$: is the proposition ``not $p$", which is true when $p$ is false
 \item $\forall xP(x)$: true iif for $P(x)$ is true for every $x$ in the domain [\textit{predicate}]
+\item $p \rightarrow q \equiv \neg p \vee q$
 \end{itemize}
 
 \section{Set}
@@ -114,6 +115,14 @@ Complete graph with $n$ vertices is the simple graph that contains exactly one e
     \item $G$ is bipartite iff it is possible to assign 2 different colors to each vertex s.t. no 2 adjacent vertices are assigned the same color
 \end{itemize}
 
+\subsection{Graph path}
+
+\begin{itemize}
+    \item total number of \textit{any} length in the graph: adjcency matrix, or manually counting
+    \item \# of linearly independent paths: $E-N+2$, $E$ and $N$ being the \# of edges and nodes of the graph
+    \item how to obtain linearly independent path: baseline method, start with the leftmore one. There should be 1 baseline path, and (2 x \# of binary decisions in the graph) more paths
+\end{itemize}
+
 \subsection{Euler path/cycle}
 
 \begin{itemize}
@@ -137,4 +146,6 @@ Complete graph with $n$ vertices is the simple graph that contains exactly one e
 \item a \textbf{coloring} of simple graph is the assignment of a color to each vertex so that no two adjcent vertices are using the same color.
 \item \textbf{chromatic number} of a graph is the least number of colors needed for a coloring of this graph
 \item A \textit{planar graph} has at most chromatic number of 4.
+\end{itemize}
+
 \end{document}
